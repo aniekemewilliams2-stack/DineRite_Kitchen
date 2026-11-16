@@ -8,23 +8,23 @@
     <title>Dine’Rite Kitchen | Authentic West African Cuisine & Smoky Jollof Rice in Uyo</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Discover delicious West African meals, authentic smoky jollof rice, and traditional Akwa Ibom soups at Dine’Rite Kitchen, 100 Udo Udoma Avenue, Uyo, Akwa Ibom State.">
-    <meta name="keywords" content="Dine'Rite Kitchen, restaurant in Uyo, West African food, smoky jollof rice, Afang soup, Edikang Ikong, Nigerian meals, Akwa Ibom restaurant, food delivery Uyo">
+    <meta name="description" content="Order delicious West African meals, authentic smoky jollof rice, and traditional Akwa Ibom soups online or reserve a table at Dine’Rite Kitchen, 100 Udo Udoma Avenue, Uyo.">
+    <meta name="keywords" content="Dine'Rite Kitchen, online food order Uyo, restaurant reservations Uyo, West African food, smoky jollof rice, Afang soup, Edikang Ikong, Nigerian meals, Akwa Ibom restaurant">
     <meta name="author" content="Dine'Rite Kitchen">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#171512">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="restaurant">
-    <meta property="og:title" content="Dine’Rite Kitchen | Authentic West African Cuisine in Uyo">
-    <meta property="og:description" content="Discover delicious West African meals, authentic smoky jollof rice, and local soups at Dine’Rite Kitchen in Uyo, Akwa Ibom State.">
+    <meta property="og:title" content="Dine’Rite Kitchen | Order Online & Table Reservations in Uyo">
+    <meta property="og:description" content="Order delicious West African meals, authentic smoky jollof rice, and local soups at Dine’Rite Kitchen in Uyo, Akwa Ibom State.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=1200&auto=format&fit=crop&q=80">
     <meta property="og:locale" content="en_NG">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dine’Rite Kitchen | Uyo, Akwa Ibom">
-    <meta name="twitter:description" content="Discover delicious West African meals, authentic smoky jollof rice, and local soups at Dine’Rite Kitchen in Uyo.">
+    <meta name="twitter:description" content="Order delicious West African meals, authentic smoky jollof rice, and local soups at Dine’Rite Kitchen in Uyo.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=1200&auto=format&fit=crop&q=80">
 
     <!-- Favicons & Web Manifest -->
@@ -53,7 +53,23 @@
         },
         "servesCuisine": ["West African", "Nigerian", "Akwa Ibom Delicacies"],
         "priceRange": "$$",
-        "url": "https://dineritekitchen.com"
+        "url": "https://dineritekitchen.com",
+        "potentialAction": {
+            "@type": "OrderAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://dineritekitchen.com/#menu",
+                "inLanguage": "en-US",
+                "actionPlatform": [
+                    "http://schema.org/DesktopWebPlatform",
+                    "http://schema.org/MobileWebPlatform"
+                ]
+            },
+            "deliveryMethod": [
+                "http://purl.org/goodrelations/v1#DeliveryModeDirectDownload",
+                "http://purl.org/goodrelations/v1#DeliveryModeMail"
+            ]
+        }
     }
     </script>
 </head>
@@ -79,8 +95,9 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#features">Why Us</a></li>
                 <li><a href="#menu">Our Menu</a></li>
+                <li><a href="#reservations">Reservations</a></li>
+                <li><a href="#features">Why Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#faq">FAQ</a></li>
@@ -88,15 +105,25 @@
             </ul>
 
             <div class="nav-cta-wrapper">
-                <a href="#menu" class="nav-btn">
-                    <span>Explore Menu</span>
+                <!-- Shopping Cart Trigger Button with Live Counter Badge -->
+                <button type="button" class="cart-trigger-btn" id="nav-cart-btn" aria-label="Open Cart Drawer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-badge">0</span>
+                </button>
+
+                <a href="#reservations" class="nav-btn">
+                    <span>Book a Table</span>
                     <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                 </a>
+
                 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <!-- Real SVG Hamburger Icon -->
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -117,21 +144,21 @@
                     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
                     </svg>
-                    <span>Premium West African Kitchen</span>
+                    <span>Premium West African Kitchen in Uyo</span>
                 </div>
                 <h1>Experience The True Taste Of <span>West Africa.</span></h1>
                 <p class="hero-description">
-                    Delicious meals, authentic smoky party jollof, and legendary Akwa Ibom native soups prepared with authentic spices and delivered fresh across Uyo.
+                    Delicious meals, authentic smoky party jollof, and legendary Akwa Ibom native soups. Order online for swift doorstep delivery or reserve an unforgettable dining experience.
                 </p>
                 <div class="hero-buttons">
                     <a href="#menu" class="primary-btn">
-                        <span>Explore Our Menu</span>
+                        <span>Order Online</span>
                         <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </a>
-                    <a href="#contact" class="secondary-btn">Contact Us</a>
+                    <a href="#reservations" class="secondary-btn">Reserve a Table</a>
                 </div>
 
                 <div class="hero-highlights">
@@ -195,70 +222,12 @@
             </div>
         </section>
 
-        <!-- 3. Why Choose Us / Value Proposition (New Section) -->
-        <section class="features-section" id="features">
-            <p class="section-subtitle">Our Quality Standards</p>
-            <h2 class="section-title">Why Dine With <span>Dine’Rite</span></h2>
-            <p class="section-desc">We never compromise on authenticity, ingredient quality, or guest satisfaction.</p>
-
-            <div class="features-grid">
-                <!-- Feature 1 -->
-                <div class="feature-card">
-                    <div class="feature-icon-wrap">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
-                        </svg>
-                    </div>
-                    <h3>True Firewood Flavor</h3>
-                    <p>Our famous smoky party jollof rice is cooked using time-tested methods that produce that irresistible, authentic Nigerian event aroma.</p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="feature-card">
-                    <div class="feature-icon-wrap">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-                        </svg>
-                    </div>
-                    <h3>Fresh Local Produce</h3>
-                    <p>We source fresh waterleaf, okazi, seafood, periwinkles, and seasonings straight from trusted Akwa Ibom farmers and markets daily.</p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="feature-card">
-                    <div class="feature-icon-wrap">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            <polyline points="9 12 11 14 15 10"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Strict Hygiene & Seal</h3>
-                    <p>Every order is prepared in a pristine commercial kitchen and sealed in temperature-preserving, tamper-evident food containers.</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="feature-card">
-                    <div class="feature-icon-wrap">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <rect x="1" y="3" width="15" height="13"></rect>
-                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                        </svg>
-                    </div>
-                    <h3>Rapid City Delivery</h3>
-                    <p>Our dedicated dispatch fleet ensures your meals arrive steaming hot across Shelter Afrique, Ewet Housing, Ring Road, and beyond.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Expanded Menu Section with Categories -->
+        <!-- 3. Expanded Menu Section with Interactive Cart & Categories -->
         <section class="menu-section" id="menu">
             <p class="section-subtitle">Culinary Masterpieces</p>
             <h2 class="section-title">Explore Our <span>Menu</span></h2>
             <p class="section-desc">
-                From fragrant rice pots to royal Akwa Ibom soups and spicy flame-grilled meats. Select a category below:
+                Order directly into your cart for delivery across Uyo or chat directly with our chef on WhatsApp.
             </p>
 
             <!-- Filter Buttons -->
@@ -270,8 +239,8 @@
             </div>
 
             <div class="menu-container">
-                <!-- Dish 1: Smoky Party Jollof -->
-                <article class="food-card" data-category="rice">
+                <!-- Dish 1 -->
+                <article class="food-card" data-category="rice" data-id="dish-1">
                     <div class="food-card-img-wrap">
                         <span class="food-card-tag">Signature</span>
                         <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=600&auto=format&fit=crop&q=80" 
@@ -282,22 +251,30 @@
                         <h3>Smoky Party Jollof Rice</h3>
                         <p class="food-desc">Aromatic long-grain rice infused with rich tomato-pepper reduction, woodsmoke essence, sweet fried dodo, and spiced protein.</p>
                         <div class="food-card-footer">
-                            <span class="food-price">From ₦4,500</span>
-                            <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Smoky%20Party%20Jollof%20Rice" 
-                               class="order-btn" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/>
-                                </svg>
-                                <span>Order on WhatsApp</span>
-                            </a>
+                            <span class="food-price">₦4,500</span>
+                            <div class="card-actions">
+                                <button type="button" class="btn-add-cart" onclick="addToCart('dish-1')" aria-label="Add Smoky Party Jollof Rice to Cart">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    <span>Add to Cart</span>
+                                </button>
+                                <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Smoky%20Party%20Jollof%20Rice" 
+                                   class="btn-whatsapp-direct" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   title="Order directly on WhatsApp">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Dish 2: Native Fried Rice -->
-                <article class="food-card" data-category="rice">
+                <!-- Dish 2 -->
+                <article class="food-card" data-category="rice" data-id="dish-2">
                     <div class="food-card-img-wrap">
                         <span class="food-card-tag">Chef's Pick</span>
                         <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&auto=format&fit=crop&q=80" 
@@ -308,22 +285,30 @@
                         <h3>Native Village Fried Rice</h3>
                         <p class="food-desc">Stir-fried in spiced palm oil broth with dried prawns, scent leaves, diced cow liver, and sweet peppers for deep rustic flavour.</p>
                         <div class="food-card-footer">
-                            <span class="food-price">From ₦5,000</span>
-                            <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Native%20Village%20Fried%20Rice" 
-                               class="order-btn" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/>
-                                </svg>
-                                <span>Order on WhatsApp</span>
-                            </a>
+                            <span class="food-price">₦5,000</span>
+                            <div class="card-actions">
+                                <button type="button" class="btn-add-cart" onclick="addToCart('dish-2')" aria-label="Add Native Village Fried Rice to Cart">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    <span>Add to Cart</span>
+                                </button>
+                                <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Native%20Village%20Fried%20Rice" 
+                                   class="btn-whatsapp-direct" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   title="Order directly on WhatsApp">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Dish 3: Coconut Fried Rice -->
-                <article class="food-card" data-category="rice">
+                <!-- Dish 3 -->
+                <article class="food-card" data-category="rice" data-id="dish-3">
                     <div class="food-card-img-wrap">
                         <span class="food-card-tag">Special</span>
                         <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80" 
@@ -334,22 +319,30 @@
                         <h3>Creamy Coconut Rice & Beef</h3>
                         <p class="food-desc">Steamed in fresh coconut milk reduction with sweet bell peppers, baby carrots, and succulent roasted beef chunks.</p>
                         <div class="food-card-footer">
-                            <span class="food-price">From ₦4,800</span>
-                            <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Creamy%20Coconut%20Rice" 
-                               class="order-btn" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/>
-                                </svg>
-                                <span>Order on WhatsApp</span>
-                            </a>
+                            <span class="food-price">₦4,800</span>
+                            <div class="card-actions">
+                                <button type="button" class="btn-add-cart" onclick="addToCart('dish-3')" aria-label="Add Coconut Rice to Cart">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    <span>Add to Cart</span>
+                                </button>
+                                <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Creamy%20Coconut%20Rice" 
+                                   class="btn-whatsapp-direct" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   title="Order directly on WhatsApp">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Dish 4: Authentic Afang Soup -->
-                <article class="food-card" data-category="soups">
+                <!-- Dish 4 -->
+                <article class="food-card" data-category="soups" data-id="dish-4">
                     <div class="food-card-img-wrap">
                         <span class="food-card-tag">Akwa Ibom Pride</span>
                         <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&auto=format&fit=crop&q=80" 
@@ -360,22 +353,30 @@
                         <h3>Akwa Ibom Afang Soup</h3>
                         <p class="food-desc">The crown jewel of Uyo cuisine. Finely shredded okazi, tender waterleaf, periwinkles, stockfish head, kpomo, and pounded yam.</p>
                         <div class="food-card-footer">
-                            <span class="food-price">From ₦6,000</span>
-                            <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Akwa%20Ibom%20Afang%20Soup" 
-                               class="order-btn" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/>
-                                </svg>
-                                <span>Order on WhatsApp</span>
-                            </a>
+                            <span class="food-price">₦6,000</span>
+                            <div class="card-actions">
+                                <button type="button" class="btn-add-cart" onclick="addToCart('dish-4')" aria-label="Add Afang Soup to Cart">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    <span>Add to Cart</span>
+                                </button>
+                                <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Akwa%20Ibom%20Afang%20Soup" 
+                                   class="btn-whatsapp-direct" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   title="Order directly on WhatsApp">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Dish 5: Edikang Ikong -->
-                <article class="food-card" data-category="soups">
+                <!-- Dish 5 -->
+                <article class="food-card" data-category="soups" data-id="dish-5">
                     <div class="food-card-img-wrap">
                         <span class="food-card-tag">Traditional</span>
                         <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80" 
@@ -384,24 +385,32 @@
                     </div>
                     <div class="food-card-body">
                         <h3>Royal Edikang Ikong Soup</h3>
-                        <p class="food-desc">Luxurious, nutrient-packed vegetable soup made with premium fluted pumpkin (ugwu) leaves, waterleaf, smoked fish, and goat meat.</p>
+                        <p class="food-desc">Luxurious, nutrient-packed vegetable soup made with premium fluted pumpkin leaves, waterleaf, smoked fish, and goat meat.</p>
                         <div class="food-card-footer">
-                            <span class="food-price">From ₦6,500</span>
-                            <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Royal%20Edikang%20Ikong%20Soup" 
-                               class="order-btn" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/>
-                                </svg>
-                                <span>Order on WhatsApp</span>
-                            </a>
+                            <span class="food-price">₦6,500</span>
+                            <div class="card-actions">
+                                <button type="button" class="btn-add-cart" onclick="addToCart('dish-5')" aria-label="Add Edikang Ikong Soup to Cart">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    <span>Add to Cart</span>
+                                </button>
+                                <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Royal%20Edikang%20Ikong%20Soup" 
+                                   class="btn-whatsapp-direct" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   title="Order directly on WhatsApp">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Dish 6: Velvet Seafood Okro -->
-                <article class="food-card" data-category="soups">
+                <!-- Dish 6 -->
+                <article class="food-card" data-category="soups" data-id="dish-6">
                     <div class="food-card-img-wrap">
                         <span class="food-card-tag">Seafood</span>
                         <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&auto=format&fit=crop&q=80" 
@@ -412,22 +421,30 @@
                         <h3>Velvet Seafood Okro Soup</h3>
                         <p class="food-desc">Freshly crushed crunchy okro cooked with whole Atlantic sea prawns, fresh blue crab, croaker fish fillet, and aromatic uziza leaves.</p>
                         <div class="food-card-footer">
-                            <span class="food-price">From ₦7,000</span>
-                            <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Velvet%20Seafood%20Okro" 
-                               class="order-btn" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/>
-                                </svg>
-                                <span>Order on WhatsApp</span>
-                            </a>
+                            <span class="food-price">₦7,000</span>
+                            <div class="card-actions">
+                                <button type="button" class="btn-add-cart" onclick="addToCart('dish-6')" aria-label="Add Seafood Okro Soup to Cart">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    <span>Add to Cart</span>
+                                </button>
+                                <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Velvet%20Seafood%20Okro" 
+                                   class="btn-whatsapp-direct" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   title="Order directly on WhatsApp">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Dish 7: Grilled Catfish & Bole -->
-                <article class="food-card" data-category="grills">
+                <!-- Dish 7 -->
+                <article class="food-card" data-category="grills" data-id="dish-7">
                     <div class="food-card-img-wrap">
                         <span class="food-card-tag">Grilled Fresh</span>
                         <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=600&auto=format&fit=crop&q=80" 
@@ -438,22 +455,30 @@
                         <h3>Charcoal Flame Catfish & Bole</h3>
                         <p class="food-desc">Fresh point-and-kill catfish flame-grilled on charcoal, basted with fiery native pepper sauce, and paired with roasted plantains.</p>
                         <div class="food-card-footer">
-                            <span class="food-price">From ₦7,500</span>
-                            <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Charcoal%20Flame%20Catfish" 
-                               class="order-btn" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/>
-                                </svg>
-                                <span>Order on WhatsApp</span>
-                            </a>
+                            <span class="food-price">₦7,500</span>
+                            <div class="card-actions">
+                                <button type="button" class="btn-add-cart" onclick="addToCart('dish-7')" aria-label="Add Flame Catfish to Cart">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    <span>Add to Cart</span>
+                                </button>
+                                <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Charcoal%20Flame%20Catfish" 
+                                   class="btn-whatsapp-direct" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   title="Order directly on WhatsApp">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Dish 8: Spicy Peppered Goat Meat -->
-                <article class="food-card" data-category="grills">
+                <!-- Dish 8 -->
+                <article class="food-card" data-category="grills" data-id="dish-8">
                     <div class="food-card-img-wrap">
                         <span class="food-card-tag">Hot & Spicy</span>
                         <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80" 
@@ -462,24 +487,32 @@
                     </div>
                     <div class="food-card-body">
                         <h3>Spicy Peppered Goat Meat (Asun)</h3>
-                        <p class="food-desc">Bite-sized chunks of tender roasted chevon (goat meat) tossed in coarse habanero pepper, caramelized onions, and native spices.</p>
+                        <p class="food-desc">Bite-sized chunks of tender roasted chevon tossed in coarse habanero pepper, caramelized onions, and native spices.</p>
                         <div class="food-card-footer">
-                            <span class="food-price">From ₦4,000</span>
-                            <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Spicy%20Peppered%20Goat%20Meat" 
-                               class="order-btn" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/>
-                                </svg>
-                                <span>Order on WhatsApp</span>
-                            </a>
+                            <span class="food-price">₦4,000</span>
+                            <div class="card-actions">
+                                <button type="button" class="btn-add-cart" onclick="addToCart('dish-8')" aria-label="Add Peppered Goat Meat to Cart">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    <span>Add to Cart</span>
+                                </button>
+                                <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Spicy%20Peppered%20Goat%20Meat" 
+                                   class="btn-whatsapp-direct" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   title="Order directly on WhatsApp">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- Dish 9: Peppered Turkey Wings -->
-                <article class="food-card" data-category="grills">
+                <!-- Dish 9 -->
+                <article class="food-card" data-category="grills" data-id="dish-9">
                     <div class="food-card-img-wrap">
                         <span class="food-card-tag">Customer Favorite</span>
                         <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&auto=format&fit=crop&q=80" 
@@ -490,30 +523,237 @@
                         <h3>Crispy Peppered Turkey Wings</h3>
                         <p class="food-desc">Deep seasoned jumbo turkey wings boiled in aromatic spices, fried crisp, and glazed in thick spicy Nigerian pepper stew.</p>
                         <div class="food-card-footer">
-                            <span class="food-price">From ₦4,500</span>
-                            <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Crispy%20Peppered%20Turkey" 
-                               class="order-btn" 
-                               target="_blank" 
-                               rel="noopener noreferrer">
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/>
-                                </svg>
-                                <span>Order on WhatsApp</span>
-                            </a>
+                            <span class="food-price">₦4,500</span>
+                            <div class="card-actions">
+                                <button type="button" class="btn-add-cart" onclick="addToCart('dish-9')" aria-label="Add Peppered Turkey to Cart">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                    <span>Add to Cart</span>
+                                </button>
+                                <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Dine%27Rite%20Kitchen,%20I%20would%20like%20to%20order%20the%20Crispy%20Peppered%20Turkey" 
+                                   class="btn-whatsapp-direct" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   title="Order directly on WhatsApp">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- 5. Services & Event Catering (New Section) -->
+        <!-- 4. Table Reservation System (New Dedicated Section) -->
+        <section class="reservations-section" id="reservations">
+            <p class="section-subtitle">Dine-In Hospitality</p>
+            <h2 class="section-title">Table <span>Reservations</span></h2>
+            <p class="section-desc">Reserve your table in advance for birthdays, anniversaries, business dinners, or a relaxed family meal.</p>
+
+            <div class="reservation-wrapper">
+                <!-- Left: Perks and Information -->
+                <div class="reservation-info">
+                    <h3 style="color: var(--color-gold); font-size: 26px; font-weight: 800; margin-bottom: 15px;">A Dining Experience Tailored For You</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                        Whether you seek an intimate dinner for two in our Gold Lounge or a lively family feast on our Terrace, reserving your table guarantees zero wait time and dedicated table service.
+                    </p>
+
+                    <div class="reservation-perks">
+                        <div class="perk-item">
+                            <div class="perk-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Instant Table Hold</h4>
+                                <p>Your table is prepared and held for 25 minutes past your chosen reservation slot.</p>
+                            </div>
+                        </div>
+
+                        <div class="perk-item">
+                            <div class="perk-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>VIP & Group Seating</h4>
+                                <p>Special arrangements available for private booths, corporate lunches, or celebration toasts.</p>
+                            </div>
+                        </div>
+
+                        <div class="perk-item">
+                            <div class="perk-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <polyline points="9 12 11 14 15 10"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Zero Booking Fee</h4>
+                                <p>Reservations are completely free of charge. Simply book your slot and pay for what you order.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Reservation Form Card -->
+                <div class="reservation-card">
+                    <h3>Book Your Table</h3>
+                    <p class="subtitle">Please provide your details below to confirm your reservation.</p>
+
+                    <form id="reservation-form">
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="res-name">Full Name <span>*</span></label>
+                                <input type="text" id="res-name" required placeholder="e.g. Samuel Akpan">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="res-phone">WhatsApp / Phone <span>*</span></label>
+                                <input type="tel" id="res-phone" required placeholder="e.g. 0801 234 5678">
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="res-date">Reservation Date <span>*</span></label>
+                                <input type="date" id="res-date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="res-time">Preferred Time Slot <span>*</span></label>
+                                <select id="res-time" required>
+                                    <option value="12:00 PM (Lunch)">12:00 PM (Lunch)</option>
+                                    <option value="1:30 PM (Lunch)">1:30 PM (Lunch)</option>
+                                    <option value="3:00 PM (Afternoon)">3:00 PM (Afternoon)</option>
+                                    <option value="5:00 PM (Early Dinner)">5:00 PM (Early Dinner)</option>
+                                    <option value="6:30 PM (Dinner)">6:30 PM (Dinner)</option>
+                                    <option value="8:00 PM (Late Dinner)">8:00 PM (Late Dinner)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="res-guests">Number of Guests <span>*</span></label>
+                                <select id="res-guests" required>
+                                    <option value="1 Person (Solo Dining)">1 Person (Solo Dining)</option>
+                                    <option value="2 People (Table for Two)" selected>2 People (Table for Two)</option>
+                                    <option value="3 - 4 People (Small Group)">3 - 4 People (Small Group)</option>
+                                    <option value="5 - 6 People (Family Table)">5 - 6 People (Family Table)</option>
+                                    <option value="7 - 10 People (Party Table)">7 - 10 People (Party Table)</option>
+                                    <option value="10+ People (Event/VIP)">10+ People (Event / VIP Gathering)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="res-seating">Seating Preference <span>*</span></label>
+                                <select id="res-seating" required>
+                                    <option value="Main AC Dining Hall">Main AC Dining Hall</option>
+                                    <option value="Executive VIP Lounge">Executive VIP Lounge</option>
+                                    <option value="Outdoor Terrace">Outdoor Evening Terrace</option>
+                                    <option value="Chef's Window Booth">Chef's Window Booth</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-occasion">Occasion</label>
+                            <select id="res-occasion">
+                                <option value="Casual Lunch / Dinner">Casual Lunch / Dinner</option>
+                                <option value="Birthday Celebration">Birthday Celebration</option>
+                                <option value="Romantic Date / Anniversary">Romantic Date / Anniversary</option>
+                                <option value="Business Meeting / Lunch">Business Meeting / Lunch</option>
+                                <option value="Family Gathering">Family Gathering</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-notes">Special Requests / Dietary Notes</label>
+                            <textarea id="res-notes" rows="2" placeholder="e.g. Quiet corner, high chair, birthday cake presentation..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit-booking">
+                            <span>Confirm Table Reservation</span>
+                            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Why Choose Us / Value Proposition -->
+        <section class="features-section" id="features">
+            <p class="section-subtitle">Our Quality Standards</p>
+            <h2 class="section-title">Why Dine With <span>Dine’Rite</span></h2>
+            <p class="section-desc">We never compromise on authenticity, ingredient quality, or guest satisfaction.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>True Firewood Flavor</h3>
+                    <p>Our famous smoky party jollof rice is cooked using time-tested methods that produce that irresistible, authentic Nigerian event aroma.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                        </svg>
+                    </div>
+                    <h3>Fresh Local Produce</h3>
+                    <p>We source fresh waterleaf, okazi, seafood, periwinkles, and seasonings straight from trusted Akwa Ibom farmers and markets daily.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <polyline points="9 12 11 14 15 10"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Strict Hygiene & Seal</h3>
+                    <p>Every order is prepared in a pristine commercial kitchen and sealed in temperature-preserving, tamper-evident food containers.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                    </div>
+                    <h3>Rapid City Delivery</h3>
+                    <p>Our dedicated dispatch fleet ensures your meals arrive steaming hot across Shelter Afrique, Ewet Housing, Ring Road, and beyond.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Services & Event Catering Section -->
         <section class="services-section" id="services">
             <p class="section-subtitle">What We Offer</p>
             <h2 class="section-title">Catering & Special <span>Services</span></h2>
             <p class="section-desc">Beyond individual meals, we bring unforgettable feasts to your home, office, and events.</p>
 
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="service-card">
                     <div class="service-icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -534,13 +774,12 @@
                             Pre-order for zero waiting time
                         </li>
                     </ul>
-                    <a href="#contact" class="service-cta">
-                        <span>Visit Us Today</span>
+                    <a href="#reservations" class="service-cta">
+                        <span>Book a Table</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="service-card">
                     <div class="service-icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -568,7 +807,6 @@
                     </a>
                 </div>
 
-                <!-- Service 3 -->
                 <div class="service-card">
                     <div class="service-icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -577,7 +815,7 @@
                             <line x1="12" y1="22.08" x2="12" y2="12"></line>
                         </svg>
                     </div>
-                    <h3>Family Soup Bowls & Bulk Orders</h3>
+                    <h3>Family Soup Bowls & Bulk Pots</h3>
                     <p>Too busy to cook? Order 2L, 3L, or 5L containers of Afang, Edikang Ikong, Egusi, or Jollof rice ready for your home refrigerator.</p>
                     <ul class="service-list">
                         <li>
@@ -597,14 +835,13 @@
             </div>
         </section>
 
-        <!-- 6. Testimonials Section (Clean SVG Stars) -->
+        <!-- 7. Testimonials Section -->
         <section class="testimonials" id="reviews">
             <p class="section-subtitle">What People Say</p>
             <h2 class="section-title">Our Guests, Our <span>Pride</span></h2>
             <p class="section-desc">Read genuine reviews from food lovers, families, and professionals across Uyo.</p>
 
             <div class="testimonial-container">
-                <!-- Testimonial 1 -->
                 <div class="testimonial-card">
                     <div class="rating-stars" aria-label="5 out of 5 stars">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -613,7 +850,7 @@
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                    <p>"The smoky party jollof rice is hands down the best in Uyo! The aroma hit me before I even opened the box, and the chicken was deeply seasoned to the bone."</p>
+                    <p>"The online ordering experience is so smooth! The smoky party jollof rice is hands down the best in Uyo! The aroma hit me before I even opened the box."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar" aria-hidden="true">AO</div>
                         <div class="author-info">
@@ -623,7 +860,6 @@
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
                 <div class="testimonial-card">
                     <div class="rating-stars" aria-label="5 out of 5 stars">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -632,17 +868,16 @@
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                    <p>"We ordered 30 packed meals for our company strategy meeting along Udo Udoma. Delivery was timely, food was piping hot, and everyone loved the Afang soup!"</p>
+                    <p>"We reserved a VIP booth for my husband's birthday. Table was set perfectly before our arrival, food was piping hot, and everyone loved the Afang soup!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar" aria-hidden="true">EA</div>
                         <div class="author-info">
                             <h4>Emem Archibong</h4>
-                            <span>Corporate Client</span>
+                            <span>Table Reservation Guest</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 3 -->
                 <div class="testimonial-card">
                     <div class="rating-stars" aria-label="5 out of 5 stars">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -651,7 +886,7 @@
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                    <p>"The grilled catfish and bole is exceptional. The pepper sauce has that authentic kick without being overpowering. Definitely my go-to weekend dinner."</p>
+                    <p>"The grilled catfish and bole is exceptional. The cart and checkout system is instant and sends the whole order straight to WhatsApp cleanly!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar" aria-hidden="true">CU</div>
                         <div class="author-info">
@@ -663,14 +898,25 @@
             </div>
         </section>
 
-        <!-- 7. Frequently Asked Questions (FAQ Section - New) -->
+        <!-- 8. Frequently Asked Questions (FAQ Section) -->
         <section class="faq-section" id="faq">
             <p class="section-subtitle">Got Questions?</p>
             <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
-            <p class="section-desc">Find quick answers to common questions about orders, deliveries, and dining with us.</p>
+            <p class="section-desc">Find quick answers to common questions about orders, deliveries, and table bookings.</p>
 
             <div class="faq-accordion">
-                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How does the online cart and checkout work?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Click "Add to Cart" on any dish to build your order. When ready, click your Cart icon to review items, choose Delivery or Store Pickup, and hit Checkout. Your order receipt is automatically compiled with an Order ID and can be dispatched to our kitchen via WhatsApp in one tap!</p>
+                    </div>
+                </div>
+
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>Do you offer delivery across all parts of Uyo?</span>
@@ -679,40 +925,25 @@
                         </svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! We deliver across Uyo metropolis, including Shelter Afrique, Ewet Housing, Ring Road 1-3, Aka Road, Abak Road, Nwaniba, and Ikot Ekpene Road. Dispatch fees are calculated based on your specific location.</p>
+                        <p>Yes! We deliver across Uyo metropolis, including Shelter Afrique, Ewet Housing, Ring Road 1-3, Aka Road, Abak Road, Nwaniba, and Ikot Ekpene Road. Delivery fees are automatically calculated when you select your zone.</p>
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>How do I place an order via WhatsApp?</span>
+                        <span>Is there a fee to reserve a table?</span>
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Simply tap any "Order on WhatsApp" button on the menu or click the floating WhatsApp button. You’ll be connected directly with our kitchen order desk, where you can confirm your items, share your delivery address, and make payment.</p>
+                        <p>No! Table reservations at Dine’Rite Kitchen are 100% free. We hold your table for up to 25 minutes after your scheduled time.</p>
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
-                        <span>How far in advance should I book event catering?</span>
-                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>For corporate lunch packs (20–50 packs), 24 hours advance notice is ideal. For weddings and large events (100+ guests), we recommend reaching out at least 1 to 2 weeks prior so we can customize your menu and logistics.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Can I order family-sized soup pots for freezing?</span>
+                        <span>Can I pre-order large family soup bowls for freezing?</span>
                         <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
@@ -722,7 +953,6 @@
                     </div>
                 </div>
 
-                <!-- FAQ 5 -->
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>What payment methods do you accept?</span>
@@ -737,7 +967,7 @@
             </div>
         </section>
 
-        <!-- 8. Contact & Location Section (Clean SVG Icons) -->
+        <!-- 9. Contact & Location Section -->
         <section class="contact" id="contact">
             <p class="section-subtitle">Reach Our Team</p>
             <h2 class="section-title">We'd Love To <span>Hear From You</span></h2>
@@ -746,7 +976,6 @@
             </p>
 
             <div class="contact-details">
-                <!-- Location Card (SVG Pin) -->
                 <div class="contact-card">
                     <div class="contact-icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -764,7 +993,6 @@
                     </div>
                 </div>
 
-                <!-- Hours Card (SVG Clock) -->
                 <div class="contact-card">
                     <div class="contact-icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -777,7 +1005,6 @@
                     <p style="font-size: 13px; color: var(--color-gold); margin-top: 10px;">Hot Kitchen Open Daily</p>
                 </div>
 
-                <!-- WhatsApp Card (SVG Chat) -->
                 <div class="contact-card">
                     <div class="contact-icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -813,8 +1040,9 @@
             <nav class="footer-links" aria-label="Footer Navigation">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#features">Why Us</a>
                 <a href="#menu">Our Menu</a>
+                <a href="#reservations">Reservations</a>
+                <a href="#features">Why Us</a>
                 <a href="#services">Services</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#faq">FAQ</a>
@@ -827,7 +1055,255 @@
         </div>
     </footer>
 
-    <!-- Main JavaScript -->
+    <!-- =====================================================================
+         CART SLIDE-OVER DRAWER
+         ===================================================================== -->
+    <div class="cart-backdrop" id="cart-backdrop"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
+        <div class="cart-header">
+            <div class="cart-title-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <h3>Your Order Cart</h3>
+            </div>
+            <button type="button" class="btn-close-drawer" id="cart-close-btn" aria-label="Close cart drawer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+
+        <div class="cart-body" id="cart-items-container">
+            <!-- Dynamically populated via JS -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <strong id="cart-subtotal">₦0</strong>
+            </div>
+            <div class="cart-summary-line">
+                <span>Estimated Delivery</span>
+                <strong id="cart-delivery-fee">₦0</strong>
+            </div>
+            <div class="cart-summary-line total">
+                <span>Total</span>
+                <span id="cart-grand-total">₦0</span>
+            </div>
+            <button type="button" class="btn-checkout-proceed" id="btn-proceed-checkout">
+                <span>Proceed to Checkout</span>
+                <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+        </div>
+    </aside>
+
+    <!-- =====================================================================
+         CHECKOUT MODAL
+         ===================================================================== -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div>
+                    <h3>Complete Your Order</h3>
+                    <p>Enter your delivery details or select takeaway pickup.</p>
+                </div>
+                <button type="button" class="btn-close-modal" id="btn-close-checkout" aria-label="Close checkout modal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+
+            <!-- Order Type Selection -->
+            <div class="order-type-tabs">
+                <button type="button" class="type-tab-btn active" data-type="delivery">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <span>Doorstep Delivery</span>
+                </button>
+                <button type="button" class="type-tab-btn" data-type="pickup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Store Pickup (Free)</span>
+                </button>
+            </div>
+
+            <!-- Order Items Snippet -->
+            <div class="checkout-summary-box">
+                <h4>Order Summary</h4>
+                <div class="checkout-items-list" id="checkout-items-summary">
+                    <!-- Populated via JS -->
+                </div>
+                <div class="cart-summary-line" style="margin-bottom: 4px;">
+                    <span>Subtotal:</span>
+                    <strong id="checkout-subtotal">₦0</strong>
+                </div>
+                <div class="cart-summary-line" style="margin-bottom: 4px;">
+                    <span>Delivery:</span>
+                    <strong id="checkout-delivery-fee">₦0</strong>
+                </div>
+                <div class="cart-summary-line total" style="margin-bottom: 0; padding-top: 6px;">
+                    <span>Grand Total:</span>
+                    <span id="checkout-grand-total">₦0</span>
+                </div>
+            </div>
+
+            <!-- Checkout Form -->
+            <form id="checkout-form">
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="cust-name">Full Name <span>*</span></label>
+                        <input type="text" id="cust-name" required placeholder="e.g. John Okon">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cust-phone">WhatsApp Phone <span>*</span></label>
+                        <input type="tel" id="cust-phone" required placeholder="e.g. 0801 234 5678">
+                    </div>
+                </div>
+
+                <div class="form-group" id="delivery-zone-group">
+                    <label for="cust-zone">Delivery Area in Uyo <span>*</span></label>
+                    <select id="cust-zone">
+                        <option value="ewet-housing">Ewet Housing Estate (₦800)</option>
+                        <option value="shelter-afrique">Shelter Afrique Estate (₦1,000)</option>
+                        <option value="osongama">Osongama Estate (₦1,000)</option>
+                        <option value="ring-road">Ring Road 1, 2 & 3 (₦1,200)</option>
+                        <option value="aka-road">Aka Road & Environs (₦1,000)</option>
+                        <option value="abak-road">Abak Road & Federal Housing (₦1,200)</option>
+                        <option value="ikot-ekpene">Ikot Ekpene Road (₦1,500)</option>
+                        <option value="nwaniba">Nwaniba & Uniuyo Main Campus (₦1,500)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="delivery-address-group">
+                    <label for="cust-address">Street Address / Landmark <span>*</span></label>
+                    <input type="text" id="cust-address" placeholder="e.g. Plot 14, 2nd Avenue, Shelter Afrique">
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="cust-payment">Payment Method</label>
+                        <select id="cust-payment">
+                            <option value="Instant Bank Transfer">Instant Bank Transfer</option>
+                            <option value="POS on Delivery">POS on Delivery</option>
+                            <option value="Online Card Payment">Online Card Payment</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cust-notes">Special Instructions</label>
+                        <input type="text" id="cust-notes" placeholder="e.g. Extra spicy, call when outside...">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-checkout-proceed" style="margin-top: 15px;">
+                    <span>Place Order & Generate Receipt</span>
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         ORDER SUCCESS RECEIPT MODAL
+         ===================================================================== -->
+    <div class="modal-overlay" id="order-receipt-modal">
+        <div class="modal-container">
+            <div class="receipt-header">
+                <div class="receipt-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Order Placed Successfully!</h3>
+                <p>Your order has been recorded in our kitchen order system.</p>
+                <div class="receipt-code-badge" id="receipt-order-id">DRK-ORD-0000</div>
+            </div>
+
+            <div class="receipt-details-card">
+                <div class="receipt-row">
+                    <span>Customer Name:</span>
+                    <strong id="receipt-customer-name">-</strong>
+                </div>
+                <div class="receipt-row">
+                    <span>Phone:</span>
+                    <strong id="receipt-customer-phone">-</strong>
+                </div>
+                <div class="receipt-row">
+                    <span>Order Type:</span>
+                    <strong id="receipt-order-type">-</strong>
+                </div>
+                <div class="receipt-row">
+                    <span>Delivery Location:</span>
+                    <strong id="receipt-order-address">-</strong>
+                </div>
+                <div class="receipt-row total-row">
+                    <span>Grand Total:</span>
+                    <strong id="receipt-order-total">₦0</strong>
+                </div>
+            </div>
+
+            <div class="receipt-actions">
+                <a href="#" id="btn-send-order-wa" class="btn-whatsapp-send" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                    <span>Send Order to WhatsApp Dispatch</span>
+                </a>
+                <button type="button" class="secondary-btn" id="btn-close-receipt" style="width: 100%;">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         RESERVATION SUCCESS RECEIPT MODAL
+         ===================================================================== -->
+    <div class="modal-overlay" id="reservation-receipt-modal">
+        <div class="modal-container">
+            <div class="receipt-header">
+                <div class="receipt-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Table Reserved Successfully!</h3>
+                <p>We are delighted to host you at Dine’Rite Kitchen.</p>
+                <div class="receipt-code-badge" id="res-receipt-code">DRK-RES-0000</div>
+            </div>
+
+            <div class="receipt-details-card">
+                <div class="receipt-row">
+                    <span>Guest Name:</span>
+                    <strong id="res-receipt-name">-</strong>
+                </div>
+                <div class="receipt-row">
+                    <span>Date & Time:</span>
+                    <strong id="res-receipt-datetime">-</strong>
+                </div>
+                <div class="receipt-row">
+                    <span>Party Size:</span>
+                    <strong id="res-receipt-guests">-</strong>
+                </div>
+                <div class="receipt-row">
+                    <span>Seating Area:</span>
+                    <strong id="res-receipt-seating">-</strong>
+                </div>
+                <div class="receipt-row">
+                    <span>Occasion:</span>
+                    <strong id="res-receipt-occasion">-</strong>
+                </div>
+            </div>
+
+            <div class="receipt-actions">
+                <a href="#" id="btn-send-res-wa" class="btn-whatsapp-send" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.227-.557-1.954-.81-3.21-2.793-3.308-2.923-.098-.13-1.077-1.433-1.077-2.733 0-1.3 0.683-1.939.924-2.201.24-.262.525-.328.7-.328.176 0 .351.002.506.009.163.007.382-.062.597.457.22.531.75 1.831.815 1.963.065.132.109.286.022.459-.087.173-.131.281-.26.433-.13.152-.274.34-.391.457-.13.13-.265.27-.114.53.151.26.671 1.109 1.44 1.794.99.882 1.825 1.155 2.085 1.285.26.13.412.109.564-.065.152-.174.652-.761.826-1.022.174-.261.348-.217.587-.13.239.087 1.52.717 1.781.848.261.13.435.196.499.305.066.109.066.63-.078 1.035z"/></svg>
+                    <span>Send Booking to Kitchen WhatsApp</span>
+                </a>
+                <button type="button" class="secondary-btn" id="btn-close-res-receipt" style="width: 100%;">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Root -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Main JavaScript Application -->
     <script src="js/main.js" defer></script>
 </body>
 </html>
