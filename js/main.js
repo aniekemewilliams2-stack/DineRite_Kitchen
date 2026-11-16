@@ -21,7 +21,7 @@ const MOCK_MENU = [
         category: "rice",
         price: 4500,
         desc: "Aromatic long-grain rice infused with rich tomato-pepper reduction, woodsmoke essence, sweet fried dodo, and spiced protein.",
-        image: "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=600&auto=format&fit=crop&q=80",
+        image: "images/menu/jollof-rice.jpg",
         tag: "Signature"
     },
     {
@@ -30,7 +30,7 @@ const MOCK_MENU = [
         category: "rice",
         price: 5000,
         desc: "Stir-fried in spiced palm oil broth with dried prawns, scent leaves, diced cow liver, and sweet peppers for deep rustic flavour.",
-        image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&auto=format&fit=crop&q=80",
+        image: "images/menu/native-rice.jpg",
         tag: "Chef's Pick"
     },
     {
@@ -39,7 +39,7 @@ const MOCK_MENU = [
         category: "rice",
         price: 4800,
         desc: "Steamed in fresh coconut milk reduction with sweet bell peppers, baby carrots, and succulent roasted beef chunks.",
-        image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&auto=format&fit=crop&q=80",
+        image: "images/menu/coconut-rice.jpg",
         tag: "Special"
     },
     {
@@ -48,7 +48,7 @@ const MOCK_MENU = [
         category: "soups",
         price: 6000,
         desc: "The crown jewel of Uyo cuisine. Finely shredded okazi, tender waterleaf, periwinkles, stockfish head, kpomo, and pounded yam.",
-        image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&auto=format&fit=crop&q=80",
+        image: "images/menu/afang-soup.jpg",
         tag: "Akwa Ibom Pride"
     },
     {
@@ -57,7 +57,7 @@ const MOCK_MENU = [
         category: "soups",
         price: 6500,
         desc: "Luxurious, nutrient-packed vegetable soup made with premium fluted pumpkin leaves, waterleaf, smoked fish, and goat meat.",
-        image: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&auto=format&fit=crop&q=80",
+        image: "images/menu/edikang-ikong.jpg",
         tag: "Traditional"
     },
     {
@@ -66,7 +66,7 @@ const MOCK_MENU = [
         category: "soups",
         price: 7000,
         desc: "Freshly crushed crunchy okro cooked with whole Atlantic sea prawns, fresh blue crab, croaker fish fillet, and aromatic uziza leaves.",
-        image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&auto=format&fit=crop&q=80",
+        image: "images/menu/seafood-okro.jpg",
         tag: "Seafood"
     },
     {
@@ -75,7 +75,7 @@ const MOCK_MENU = [
         category: "grills",
         price: 7500,
         desc: "Fresh point-and-kill catfish flame-grilled on charcoal, basted with fiery native pepper sauce, and paired with roasted plantains.",
-        image: "https://images.unsplash.com/photo-1534939561126-855b8675edd7?w=600&auto=format&fit=crop&q=80",
+        image: "images/menu/catfish-bole.jpg",
         tag: "Grilled Fresh"
     },
     {
@@ -84,7 +84,7 @@ const MOCK_MENU = [
         category: "grills",
         price: 4000,
         desc: "Bite-sized chunks of tender roasted chevon tossed in coarse habanero pepper, caramelized onions, and native spices.",
-        image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&auto=format&fit=crop&q=80",
+        image: "images/menu/asun-goat-meat.jpg",
         tag: "Hot & Spicy"
     },
     {
@@ -93,7 +93,7 @@ const MOCK_MENU = [
         category: "grills",
         price: 4500,
         desc: "Deep seasoned jumbo turkey wings boiled in aromatic spices, fried crisp, and glazed in thick spicy Nigerian pepper stew.",
-        image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=600&auto=format&fit=crop&q=80",
+        image: "images/menu/peppered-poultry.jpg",
         tag: "Customer Favorite"
     }
 ];
