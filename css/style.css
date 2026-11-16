@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Dine'Rite Kitchen - Modern Stylesheet
+   Dine'Rite Kitchen - Modern Stylesheet (Expanded)
    Brand Colors: Dark Espresso (#171512), Warm Wood (#201d18), Amber Gold (#d6a45c)
    ========================================================================== */
 
@@ -10,20 +10,20 @@
     --bg-primary: #171512;
     --bg-secondary: #201d18;
     --bg-card: #202020;
-    --bg-card-hover: #262626;
+    --bg-card-hover: #272420;
     --bg-footer: #100f0d;
-    --bg-nav-mobile: #171717;
+    --bg-nav-mobile: #181613;
 
     --color-gold: #d6a45c;
     --color-gold-hover: #e5b875;
     --color-gold-glow: rgba(214, 164, 92, 0.2);
     --color-text-primary: #ffffff;
     --color-text-secondary: #cccccc;
-    --color-text-muted: #888888;
+    --color-text-muted: #8e8e8e;
     --color-whatsapp: #25D366;
     --color-whatsapp-hover: #1da851;
 
-    --border-subtle: #383838;
+    --border-subtle: #35322c;
     --border-gold: #d6a45c;
 
     --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -80,6 +80,16 @@ button {
     cursor: pointer;
     border: none;
     outline: none;
+    background: transparent;
+}
+
+/* SVG Utility Class */
+.icon-svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    flex-shrink: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -89,9 +99,9 @@ button {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgba(23, 21, 18, 0.95);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(23, 21, 18, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(214, 164, 92, 0.15);
     transition: var(--transition);
 }
@@ -100,9 +110,9 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1280px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 20px 7%;
+    padding: 18px 6%;
 }
 
 .logo {
@@ -119,12 +129,12 @@ button {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 26px;
 }
 
 .nav-links li a {
     color: var(--color-text-primary);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     position: relative;
     padding: 6px 0;
@@ -153,7 +163,7 @@ button {
 .nav-cta-wrapper {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
 }
 
 .nav-btn {
@@ -164,6 +174,9 @@ button {
     font-weight: 700;
     font-size: 14px;
     transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .nav-btn:hover {
@@ -174,12 +187,15 @@ button {
 
 .menu-toggle {
     display: none;
-    background: transparent;
     color: var(--color-gold);
-    font-size: 28px;
-    padding: 4px 8px;
+    padding: 6px;
     border-radius: var(--radius-sm);
     transition: var(--transition);
+}
+
+.menu-toggle svg {
+    width: 28px;
+    height: 28px;
 }
 
 .menu-toggle:focus-visible {
@@ -187,33 +203,44 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   4. Hero Section
+   4. Hero Section & Badges
    -------------------------------------------------------------------------- */
 .hero {
-    min-height: 85vh;
+    min-height: 88vh;
     display: flex;
     align-items: center;
-    padding: 100px 7%;
+    padding: 90px 6%;
     background: linear-gradient(
-        rgba(10, 9, 8, 0.75),
-        rgba(23, 21, 18, 0.88)
+        rgba(10, 9, 8, 0.8),
+        rgba(23, 21, 18, 0.92)
     ),
     url('https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
     text-align: left;
 }
 
 .hero-content {
-    max-width: 680px;
+    max-width: 720px;
 }
 
 .welcome-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     color: var(--color-gold);
-    letter-spacing: 4px;
-    font-size: 13px;
+    background: rgba(214, 164, 92, 0.12);
+    border: 1px solid rgba(214, 164, 92, 0.3);
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    letter-spacing: 2px;
+    font-size: 12px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     text-transform: uppercase;
+}
+
+.welcome-badge svg {
+    width: 16px;
+    height: 16px;
 }
 
 .hero h1 {
@@ -229,17 +256,18 @@ button {
 }
 
 .hero-description {
-    color: #eeeeee;
+    color: #dedede;
     font-size: clamp(16px, 2vw, 19px);
     line-height: 1.7;
     margin-bottom: 35px;
-    max-width: 580px;
+    max-width: 620px;
 }
 
 .hero-buttons {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+    margin-bottom: 35px;
 }
 
 .primary-btn,
@@ -247,6 +275,7 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     padding: 14px 28px;
     border-radius: var(--radius-sm);
     font-weight: 700;
@@ -280,12 +309,35 @@ button {
     transform: translateY(-3px);
 }
 
+.hero-highlights {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.highlight-item svg {
+    color: var(--color-gold);
+    width: 18px;
+    height: 18px;
+}
+
 /* --------------------------------------------------------------------------
    5. Section Header Component
    -------------------------------------------------------------------------- */
 .section-subtitle {
     color: var(--color-gold);
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
@@ -322,7 +374,7 @@ button {
     color: var(--color-text-secondary);
     font-size: 16px;
     line-height: 1.7;
-    max-width: 620px;
+    max-width: 640px;
     margin: 0 auto;
 }
 
@@ -330,12 +382,12 @@ button {
    6. About Us Section
    -------------------------------------------------------------------------- */
 .about {
-    padding: 100px 7%;
+    padding: 100px 6%;
     background-color: var(--bg-primary);
 }
 
 .about-container {
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -356,6 +408,37 @@ button {
     aspect-ratio: 4/3;
 }
 
+.about-badge-overlay {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--color-gold);
+    border-radius: var(--radius-md);
+    padding: 14px 22px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.about-badge-overlay svg {
+    width: 32px;
+    height: 32px;
+    color: var(--color-gold);
+}
+
+.about-badge-overlay h4 {
+    font-size: 15px;
+    color: var(--color-gold);
+}
+
+.about-badge-overlay p {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin: 0 !important;
+}
+
 .about-content {
     flex: 1;
     text-align: left;
@@ -369,7 +452,9 @@ button {
 }
 
 .about-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin-top: 15px;
     padding: 14px 28px;
     background-color: var(--color-gold);
@@ -386,20 +471,117 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   7. Menu Section
+   7. Why Choose Us / Value Proposition (New Section)
    -------------------------------------------------------------------------- */
-.menu-section {
-    padding: 100px 7%;
+.features-section {
+    padding: 95px 6%;
     background-color: var(--bg-secondary);
     text-align: center;
 }
 
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 1240px;
+    margin: 50px auto 0;
+}
+
+.feature-card {
+    background: var(--bg-primary);
+    padding: 38px 26px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+    transition: var(--transition);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-hover);
+}
+
+.feature-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-sm);
+    background: rgba(214, 164, 92, 0.12);
+    border: 1px solid rgba(214, 164, 92, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gold);
+    margin-bottom: 22px;
+}
+
+.feature-icon-wrap svg {
+    width: 28px;
+    height: 28px;
+}
+
+.feature-card h3 {
+    color: var(--color-gold);
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   8. Menu Section & Category Filters
+   -------------------------------------------------------------------------- */
+.menu-section {
+    padding: 100px 6%;
+    background-color: var(--bg-primary);
+    text-align: center;
+}
+
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 40px auto 0;
+    max-width: 800px;
+}
+
+.filter-btn {
+    padding: 10px 22px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-subtle);
+    background-color: var(--bg-secondary);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    color: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+.filter-btn.active {
+    background-color: var(--color-gold);
+    color: var(--bg-primary);
+    border-color: var(--color-gold);
+    font-weight: 700;
+}
+
 .menu-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
-    max-width: 1180px;
-    margin: 50px auto 0;
+    max-width: 1240px;
+    margin: 45px auto 0;
 }
 
 /* Food Card */
@@ -413,6 +595,10 @@ button {
     flex-direction: column;
     transition: var(--transition);
     box-shadow: var(--shadow-card);
+}
+
+.food-card.hidden {
+    display: none;
 }
 
 .food-card:hover {
@@ -439,6 +625,21 @@ button {
     transform: scale(1.06);
 }
 
+.food-card-tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: rgba(23, 21, 18, 0.88);
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+}
+
 .food-card-body {
     padding: 24px;
     display: flex;
@@ -448,10 +649,9 @@ button {
 
 .food-card h3 {
     color: var(--color-gold);
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 10px;
-    position: relative;
 }
 
 .food-card h3::before {
@@ -483,7 +683,7 @@ button {
 
 .food-price {
     color: var(--color-gold);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.3px;
 }
@@ -501,6 +701,12 @@ button {
     transition: var(--transition);
 }
 
+.order-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
 .order-btn:hover {
     background-color: var(--color-text-primary);
     color: var(--bg-primary);
@@ -508,19 +714,126 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   8. Testimonials Section
+   9. Services & Event Catering Section (New Section)
+   -------------------------------------------------------------------------- */
+.services-section {
+    padding: 100px 6%;
+    background-color: var(--bg-secondary);
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1240px;
+    margin: 50px auto 0;
+}
+
+.service-card {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 40px 28px;
+    text-align: left;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-card);
+}
+
+.service-icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-sm);
+    background: rgba(214, 164, 92, 0.12);
+    border: 1px solid rgba(214, 164, 92, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gold);
+    margin-bottom: 24px;
+}
+
+.service-icon-wrap svg {
+    width: 30px;
+    height: 30px;
+}
+
+.service-card h3 {
+    color: var(--color-gold);
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.service-card p {
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.service-list {
+    margin-bottom: 24px;
+}
+
+.service-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #dddddd;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.service-list li svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-gold);
+    flex-shrink: 0;
+}
+
+.service-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-gold);
+    font-size: 14px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.service-cta:hover {
+    color: var(--color-text-primary);
+    transform: translateX(4px);
+}
+
+.service-cta svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   10. Testimonials Section
    -------------------------------------------------------------------------- */
 .testimonials {
-    padding: 100px 7%;
+    padding: 100px 6%;
     background-color: var(--bg-primary);
     text-align: center;
 }
 
 .testimonial-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    max-width: 1180px;
+    max-width: 1240px;
     margin: 50px auto 0;
 }
 
@@ -542,10 +855,16 @@ button {
 }
 
 .rating-stars {
+    display: flex;
+    gap: 4px;
     color: var(--color-gold);
-    font-size: 20px;
-    letter-spacing: 3px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+}
+
+.rating-stars svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
 }
 
 .testimonial-card p {
@@ -557,18 +876,119 @@ button {
     flex-grow: 1;
 }
 
-.testimonial-card h4 {
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 16px;
+}
+
+.author-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-full);
+    background-color: var(--bg-card);
+    border: 1px solid var(--color-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gold);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.author-info h4 {
     color: var(--color-gold);
     font-size: 15px;
     font-weight: 700;
 }
 
+.author-info span {
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+
 /* --------------------------------------------------------------------------
-   9. Contact & Location Section
+   11. Frequently Asked Questions (FAQ Section - New)
+   -------------------------------------------------------------------------- */
+.faq-section {
+    padding: 100px 6%;
+    background-color: var(--bg-secondary);
+    text-align: center;
+}
+
+.faq-accordion {
+    max-width: 820px;
+    margin: 50px auto 0;
+    text-align: left;
+}
+
+.faq-item {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    margin-bottom: 14px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item.active {
+    border-color: var(--color-gold);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: left;
+    cursor: pointer;
+    background: transparent;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    color: var(--color-gold);
+}
+
+.faq-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--color-gold);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 24px;
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 24px 20px;
+    max-height: 250px;
+}
+
+/* --------------------------------------------------------------------------
+   12. Contact & Location Section
    -------------------------------------------------------------------------- */
 .contact {
-    padding: 100px 7%;
-    background-color: var(--bg-secondary);
+    padding: 100px 6%;
+    background-color: var(--bg-primary);
     text-align: center;
 }
 
@@ -576,12 +996,12 @@ button {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 28px;
-    max-width: 1100px;
+    max-width: 1160px;
     margin: 50px auto 0;
 }
 
 .contact-card {
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
     padding: 38px 26px;
     border-radius: var(--radius-md);
     border: 1px solid var(--border-subtle);
@@ -590,23 +1010,38 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .contact-card:hover {
     border-color: var(--color-gold);
     transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
 }
 
-.contact-icon {
-    font-size: 32px;
+.contact-icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-full);
+    background: rgba(214, 164, 92, 0.12);
+    border: 1px solid rgba(214, 164, 92, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-gold);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-icon-wrap svg {
+    width: 26px;
+    height: 26px;
 }
 
 .contact-card h3 {
     color: var(--color-gold);
     font-size: 20px;
     margin-bottom: 12px;
+    font-weight: 700;
 }
 
 .contact-card p {
@@ -615,8 +1050,26 @@ button {
     font-size: 15px;
 }
 
+.delivery-areas {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+.area-tag {
+    background: rgba(255, 255, 255, 0.06);
+    color: #e0e0e0;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+}
+
 .contact-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin-top: 20px;
     padding: 12px 24px;
     background-color: var(--color-gold);
@@ -634,18 +1087,22 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   10. Footer Section
+   13. Footer Section
    -------------------------------------------------------------------------- */
 .footer {
     background-color: var(--bg-footer);
-    padding: 60px 7% 35px;
+    padding: 70px 6% 35px;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-inner {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.footer-brand {
+    margin-bottom: 30px;
 }
 
 .footer h2 {
@@ -661,20 +1118,20 @@ button {
 .footer-tagline {
     color: var(--color-text-muted);
     font-size: 15px;
-    margin: 12px 0 24px;
+    margin: 10px 0 0;
 }
 
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 28px;
     flex-wrap: wrap;
-    margin: 25px 0 35px;
+    margin: 30px 0;
 }
 
 .footer-links a {
     color: var(--color-text-secondary);
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .footer-links a:hover {
@@ -689,7 +1146,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   11. Floating WhatsApp Button
+   14. Floating WhatsApp Button
    -------------------------------------------------------------------------- */
 .whatsapp-button {
     position: fixed;
@@ -723,12 +1180,12 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   12. Responsive Design & Media Queries
+   15. Responsive Design & Media Queries
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 992px) {
     .about-container {
         flex-direction: column;
-        gap: 40px;
+        gap: 50px;
     }
 
     .about-content {
@@ -738,11 +1195,16 @@ button {
     .section-title.text-left::after {
         margin: 16px auto 0;
     }
+
+    .about-badge-overlay {
+        bottom: 10px;
+        right: 10px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .navbar {
-        padding: 16px 6%;
+        padding: 16px 5%;
     }
 
     .menu-toggle {
@@ -753,7 +1215,7 @@ button {
         display: none;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 18px;
         position: absolute;
         top: 100%;
         left: 0;
@@ -761,7 +1223,7 @@ button {
         background-color: var(--bg-nav-mobile);
         padding: 25px 20px;
         border-bottom: 1px solid var(--border-subtle);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
     }
 
     .nav-links.active {
@@ -774,7 +1236,7 @@ button {
 
     .hero {
         min-height: 75vh;
-        padding: 80px 6%;
+        padding: 80px 5%;
         text-align: center;
     }
 
@@ -786,11 +1248,18 @@ button {
         justify-content: center;
     }
 
+    .hero-highlights {
+        justify-content: center;
+    }
+
     .about,
+    .features-section,
     .menu-section,
+    .services-section,
     .testimonials,
+    .faq-section,
     .contact {
-        padding: 70px 6%;
+        padding: 70px 5%;
     }
 
     .whatsapp-button {
@@ -823,5 +1292,10 @@ button {
     .order-btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .about-badge-overlay {
+        position: static;
+        margin-top: 15px;
     }
 }

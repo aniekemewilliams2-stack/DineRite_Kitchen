@@ -1,6 +1,6 @@
 /**
  * Dine'Rite Kitchen - Main Client Script
- * Handles navigation, mobile drawer accessibility, and scroll interactions.
+ * Handles navigation, menu filtering, FAQ accordion, and scroll interactions.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -43,14 +43,61 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. Active Section Spy on Scroll
+    // 2. Menu Category Filtering
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const foodCards = document.querySelectorAll(".food-card");
+
+    if (filterButtons.length > 0 && foodCards.length > 0) {
+        filterButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                // Update active button state
+                filterButtons.forEach((b) => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                const targetCategory = btn.getAttribute("data-filter");
+
+                foodCards.forEach((card) => {
+                    const cardCategory = card.getAttribute("data-category");
+                    if (targetCategory === "all" || cardCategory === targetCategory) {
+                        card.classList.remove("hidden");
+                    } else {
+                        card.classList.add("hidden");
+                    }
+                });
+            });
+        });
+    }
+
+    // 3. FAQ Accordion Toggle
+    const faqQuestions = document.querySelectorAll(".faq-question");
+    faqQuestions.forEach((question) => {
+        question.addEventListener("click", () => {
+            const item = question.parentElement;
+            const isActive = item.classList.contains("active");
+
+            // Close other items (optional single-accordion behavior)
+            document.querySelectorAll(".faq-item").forEach((otherItem) => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove("active");
+                    const otherBtn = otherItem.querySelector(".faq-question");
+                    if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle("active", !isActive);
+            question.setAttribute("aria-expanded", String(!isActive));
+        });
+    });
+
+    // 4. Active Section Spy on Scroll
     const sections = document.querySelectorAll("section[id]");
     function updateActiveNavLink() {
         const scrollY = window.pageYOffset;
 
         sections.forEach((current) => {
             const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 120;
+            const sectionTop = current.offsetTop - 140;
             const sectionId = current.getAttribute("id");
 
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -66,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", updateActiveNavLink, { passive: true });
 
-    // 3. Dynamic Copyright Year
+    // 5. Dynamic Copyright Year
     const copyrightYearEl = document.getElementById("copyright-year");
     if (copyrightYearEl) {
         copyrightYearEl.textContent = new Date().getFullYear();
